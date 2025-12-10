@@ -1,67 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>OranjeKip | Halal Chicken Food Truck</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OranjeKip — Halal Chicken Foodtruck</title>
+  <meta name="description" content="OranjeKip — mobiele halal foodtruck met vers gegrilde kipgerechten." />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="images/Logo.png" alt="OranjeKip logo" class="brand-image">
+        <span class="brand-text">OranjeKip</span>
+      </a>
 
-  <!-- HERO -->
-  <header class="hero">
-    <img src="images/Banner.jpg" alt="OranjeKip Foodtruck">
-    <div class="overlay">
-      <img src="images/Logo.png" class="logo">
-      <h1>OranjeKip</h1>
-      <p>Halal Kip - Vers Gegrild - Foodtruck</p>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="#menu">Ons Menu</a></li>
+          <li><a href="#about">Over</a></li>
+          <li><a href="#fullmenu">Volledige Menukaart</a></li>
+          <li><a href="#follow">Volg ons</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- MENU SECTION -->
-  <section class="menu">
-    <h2>Ons Menu</h2>
+  <main>
 
-    <div class="grid">
-      <div class="card"><img src="images/Crispy Hotwings.png"><h3>Crispy Hotwings</h3></div>
-      <div class="card"><img src="images/Drumsticks.png"><h3>Drumsticks</h3></div>
-      <div class="card"><img src="images/Gegrilde kippenvleugels.png"><h3>Gegrilde Vleugels</h3></div>
-      <div class="card"><img src="images/halve kip.png"><h3>Halve Kip</h3></div>
-      <div class="card"><img src="images/hele kip.jpg"><h3>Hele Kip</h3></div>
-      <div class="card"><img src="images/Kip Schnitzel.png"><h3>Kip Schnitzel</h3></div>
-      <div class="card"><img src="images/Kip Vingers Bakje.png"><h3>Kip Vingers (Bakje)</h3></div>
-      <div class="card"><img src="images/Kip Vingers Broodje.png"><h3>Kip Vingers (Broodje)</h3></div>
-      <div class="card"><img src="images/kippenpoot.png"><h3>Kippenpoot</h3></div>
-      <div class="card"><img src="images/kippensoep.png"><h3>Kippensoep</h3></div>
-      <div class="card"><img src="images/Kipworst Bakje.jpg"><h3>Kipworst (Bakje)</h3></div>
-      <div class="card"><img src="images/Kipworst Broodje.png"><h3>Kipworst (Broodje)</h3></div>
-      <div class="card"><img src="images/Krieltjes.png"><h3>Krieltjes</h3></div>
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>OranjeKip</h1>
+        <p class="tagline">Halal Kip — Vers Gegrild — Foodtruck</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/Banner.jpg" alt="OranjeKip foodtruck">
+      </div>
+    </section>
+
+<section class="badges">
+    <div class="badge-item">
+        <img class="halal-badge" src="images/Halal batch.png" alt="Helal Sertifikası">
+        <p>100% Helal Sertifikalı Ürünler</p>
     </div>
 
-    <div class="fullmenu">
+
+
+    <!-- MENU -->
+    <section id="menu" class="container menu-section">
+      <h2>Ons Menu</h2>
+
+      <ul class="menu-grid">
+
+        <li class="menu-item">
+          <h3>Crispy Hotwings</h3>
+          <img src="images/Crispy Hotwings.png" alt="Crispy Hotwings">
+        </li>
+
+        <li class="menu-item">
+          <h3>Drumsticks</h3>
+          <img src="images/Drumsticks.png" alt="Drumsticks">
+        </li>
+
+        <li class="menu-item">
+          <h3>Gegrilde Kippenvleugels</h3>
+          <img src="images/Gegrilde kippenvleugels.png" alt="Gegrilde kippenvleugels">
+        </li>
+
+        <li class="menu-item">
+          <h3>Halve Kip</h3>
+          <img src="images/halve kip.png" alt="Halve kip">
+        </li>
+
+        <li class="menu-item">
+          <h3>Hele Kip</h3>
+          <img src="images/hele kip.jpg" alt="Hele kip">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kip Schnitzel</h3>
+          <img src="images/Kip Schnitzel.png" alt="Kip Schnitzel">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kip Vingers (Bakje)</h3>
+          <img src="images/Kip Vingers Bakje.png" alt="Kip Vingers bakje">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kip Vingers (Broodje)</h3>
+          <img src="images/Kip Vingers Broodje.png" alt="Kip Vingers broodje">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kippenpoot</h3>
+          <img src="images/Kippenpoot.png" alt="Kippenpoot">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kippensoep</h3>
+          <img src="images/Kippensoep.png" alt="Kippensoep">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kipworst (Bakje)</h3>
+          <img src="images/Kipworst Bakje.jpg" alt="Kipworst bakje">
+        </li>
+
+        <li class="menu-item">
+          <h3>Kipworst (Broodje)</h3>
+          <img src="images/Kipworst Broodje.png" alt="Kipworst broodje">
+        </li>
+
+        <li class="menu-item">
+          <h3>Krieltjes</h3>
+          <img src="images/Krieltjes.png" alt="Krieltjes">
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- FULL MENU -->
+    <section id="fullmenu" class="container fullmenu">
       <h2>Volledige Menukaart</h2>
-      <img src="images/OranjeKip Menu.png" class="menu-img">
+      <img src="images/OranjeKip Menu.png" alt="OranjeKip Menu" style="max-width:350px;width:100%;border-radius:10px;">
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container about">
+      <h2>Over OranjeKip</h2>
+      <p>OranjeKip is een mobiele halal foodtruck met vers gegrilde kipgerechten.</p>
+    </section>
+
+    <!-- FOLLOW -->
+    <section id="follow" class="container follow">
+      <h2>Volg ons</h2>
+      <p>
+        <a href="https://instagram.com" target="_blank">Instagram</a> ·
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> OranjeKip</p>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>Over OranjeKip</h2>
-    <p>OranjeKip is een mobiele halal foodtruck met vers gegrilde kipgerechten.</p>
-  </section>
-
-  <!-- SOCIAL -->
-  <section class="social">
-    <h2>Volg ons</h2>
-    <div class="social-links">
-      <a href="https://www.instagram.com/oranjekip" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/profile.php?id=61584392548795" target="_blank">Facebook</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 OranjeKip</p>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    const btn = document.getElementById("nav-toggle");
+    const nav = document.getElementById("main-nav");
+
+    btn.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  </script>
 </body>
 </html>

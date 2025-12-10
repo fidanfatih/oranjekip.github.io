@@ -1,130 +1,190 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+:root{
+  --container-w: 1100px;
+  --accent: #ff7a1a;
+  --text: #222;
+  --muted: #666;
+  --bg: #fff;
+  --radius: 10px;
+  --gap: 1.25rem;
+  font-size: 16px;
 }
 
-body {
-  background: #fffdf8;
-  color: #2d2d2d;
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  height: 80vh;
-  overflow: hidden;
+.container{
+  width: calc(100% - 2rem);
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.hero img {
+/* Header */
+.site-header{
+  border-bottom: 1px solid #eee;
+  background: linear-gradient(180deg, #fff, #fff);
+  position: sticky;
+  top:0;
+  z-index: 30;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  justify-content:space-between;
+  padding: 0.5rem 0;
+}
+.brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;color:inherit}
+.brand-image{width:48px;height:48px;object-fit:cover;border-radius:8px}
+.brand-text{font-weight:700;font-size:1.25rem;letter-spacing:0.4px}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:1px solid #ddd;
+  padding:0.4rem 0.6rem;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* Navigation */
+.main-nav ul{
+  display:flex;
+  list-style:none;
+  gap:1rem;
+  margin:0;
+  padding:0;
+}
+.main-nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:0.35rem 0.5rem;
+  border-radius:6px;
+  transition: background .15s;
+}
+.main-nav a:hover{background:#f6f6f6}
+
+/* Hero */
+.hero{display:flex;align-items:center;gap:var(--gap);padding:2rem 0}
+.hero-left h1{margin:0;font-size:2.2rem}
+.tagline{margin:0.3rem 0;color:var(--muted)}
+
+.hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 300px;
+  object-fit: contain;    /* Banner kırpılmadan tam görünür */
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.logo {
-  width: 110px;
+/* Menu grid */
+.menu-section h2{margin-top:0}
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  padding:0;
+  margin:1rem 0;
+  list-style:none;
 }
-
-.overlay h1 {
-  font-size: 3.5rem;
-  margin-top: 10px;
+.menu-item{
+  background:#fff;
+  border:1px solid #f0f0f0;
+  padding:0.9rem;
+  border-radius:10px;
+  min-height:80px;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
 }
-
-.overlay p {
-  font-size: 1.2rem;
-}
-
-/* MENU */
-.menu {
-  padding: 60px 8%;
-  text-align: center;
-}
-
-.menu h2 {
-  font-size: 2.3rem;
-  margin-bottom: 35px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  overflow: hidden;
-}
-
-.card img {
+.menu-item img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: cover;   /* kırpma olmaz — zoom-out görünür */
+  background: #fff;      /* arka plan boşluğu doldurur */
+  border-radius: 8px;
 }
 
-.card h3 {
-  padding: 12px;
-  font-size: 1.1rem;
+
+/* About / follow / footer */
+.about, .follow, .fullmenu{
+  margin:1.25rem 0 2rem 0;
+  padding:0.9rem;
+  background:#fafafa;
+  border-radius:8px;
+  border:1px solid #f3f3f3;
+}
+.site-footer{
+  border-top:1px solid #eee;
+  padding:1rem 0;
+  margin-top:2rem;
+  background: #fff;
+}
+.footer-inner{display:flex;justify-content:center;align-items:center;padding:0.6rem 0}
+.footer-inner p{margin:0;color:var(--muted)}
+
+/* Responsive */
+@media (max-width: 900px){
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{flex-direction:column-reverse;align-items:flex-start}
+  .hero-image img{max-width:100%}
 }
 
-.fullmenu {
-  margin-top: 70px;
+@media (max-width: 600px){
+  .menu-grid{grid-template-columns:1fr}
+  .nav-toggle{display:block}
+  .main-nav{position:absolute;top:66px;right:0;background:#fff;border:1px solid #eee;padding:0.5rem;border-radius:8px;display:none;min-width:180px}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:0.25rem}
 }
 
-.menu-img {
-  width: 100%;
-  max-width: 720px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.halal-badge {
+    width: 250px;   /* İstersen 90px-120px arası ayarlayabilirsin */
+    height: auto;
 }
 
-/* ABOUT */
-.about {
-  background: #fff5e6;
-  padding: 60px 8%;
-  text-align: center;
+.banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* Banner resmi */
+.banner {
+    width: 70%;
+    border-radius: 10px;
 }
 
-/* SOCIAL */
-.social {
-  padding: 50px;
-  text-align: center;
+/* İkonları yanyana tutan alan */
+.banner-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.social-links a {
-  text-decoration: none;
-  margin: 0 12px;
-  padding: 12px 26px;
-  background: #ff7a00;
-  color: white;
-  border-radius: 50px;
-  font-weight: bold;
+/* Helal logosu ölçek */
+.halal-badge {
+    width: 110px;
+    height: auto;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #222;
-  color: white;
+/* Biblo ölçek */
+.biblo {
+    width: 130px;
+    height: auto;
 }
