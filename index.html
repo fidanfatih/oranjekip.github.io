@@ -1,143 +1,110 @@
 <!DOCTYPE html>
-<html lang="nl"> <head>
+<html lang="nl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-key="title"></title> 
-    
+    <title>Oranje Kip - De warmste kip van de stad</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-
-    <header class="navbar">
+    <header>
         <div class="container">
-            <img src="assets/logo.png" alt="Oranje Kip Logo" class="logo-img"> 
-            
-            <div class="language-switcher">
-                <button class="lang-btn" data-lang="nl">NL</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-
+            <h1 class="logo">Oranje Kip</h1>
             <nav>
                 <ul>
-                    <li><a href="#home" data-key="navHome"></a></li>
-                    <li><a href="#products" data-key="navProducts"></a></li>
-                    <li><a href="#about" data-key="navAbout"></a></li>
-                    <li><a href="#contact" data-key="navContact"></a></li>
+                    <li><a href="#home">Thuis</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#locatie">Locatie</a></li>
+                    <li><a href="#galerij">Galerij</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <a href="index.html" class="active">NL</a> | <a href="index_en.html">EN</a>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero-section">
-        <div class="container">
-            <h1 data-key="heroHeading"></h1>
-            <p data-key="heroSubheading"></p>
-            <a href="#products" class="btn-primary" data-key="heroButton"></a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="sub-slogan">100% Halal en vers gegrild</h2>
+            <h1>De warmste kip van de stad</h1>
+            <p>Onze foodtruck brengt de lekkerste kip specialiteiten, vers bereid, waar u ook bent.</p>
+            <a href="#menu" class="cta-button">Bekijk Ons Menu</a>
         </div>
     </section>
 
-    <section class="section-padding bg-light quality-focus">
-        <div class="container text-center">
-            <h2 data-key="qualityTitle"></h2> 
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="image-placeholder icon-halal">[Halal Certification Icon]</div>
-                    <h3 data-key="featureHalalTitle"></h3>
-                    <p data-key="featureHalalDesc"></p>
-                </div>
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Ons Menu</h2>
+            <div class="menu-grid">
                 
-                <div class="feature-card">
-                    <div class="image-placeholder icon-fresh">[Freshness Icon]</div>
-                    <h3 data-key="featureFreshTitle"></h3>
-                    <p data-key="featureFreshDesc"></p>
+                <div class="menu-column">
+                    <h3>Kipspecialiteiten</h3>
+                    <ul class="menu-list">
+                        <li><span>Hele Kip</span><span>€ 11</span></li>
+                        <li><span>Halve Kip</span><span>€ 6</span></li>
+                        <li><span>Kipvleugels (5/10 stuks)</span><span>€ 6 / € 10</span></li>
+                        <li><span>Drumsticks (5/10 stuks)</span><span>€ 7 / € 11</span></li>
+                        <li><span>Kippenbouten (3/5 stuks)</span><span>€ 8.5 / € 11</span></li>
+                        <li><span>Crispy Hotwings (6/12 stuks)</span><span>€ 6.5 / € 11</span></li>
+                        <li><span>Schnitzel</span><span>€ 7.5</span></li>
+                    </ul>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="image-placeholder icon-dutch">[Dutch Flag Icon]</div>
-                    <h3 data-key="featureDutchTitle"></h3>
-                    <p data-key="featureDutchDesc"></p>
+
+                <div class="menu-column">
+                    <h3>Snacks & Bijgerechten</h3>
+                    <ul class="menu-list">
+                        <li><span>Kip Vingers (Broodje/Bakje)</span><span>€ 6.5 / € 6</span></li>
+                        <li><span>Kipworst (Broodje/Bakje)</span><span>€ 6 / € 5.5</span></li>
+                        <li><span>Kippensoep (400ml)</span><span>€ 3.5</span></li>
+                        <li><span>Friet (150g)</span><span>€ 2.5</span></li>
+                        <li><span>Krieltjes (150g)</span><span>€ 2.5</span></li>
+                    </ul>
+                    <h3 class="mt-20">Dranken</h3>
+                    <ul class="menu-list">
+                        <li><span>Cola / Fanta</span><span>€ 2</span></li>
+                        <li><span>Buttermilk</span><span>€ 1.5</span></li>
+                        <li><span>Water</span><span>€ 1</span></li>
+                    </ul>
                 </div>
+            </div>
+            <p class="halal-note">Onze producten zijn <strong>100% HALAL</strong> gecertificeerd.</p>
+        </div>
+    </section>
+
+    <section id="galerij" class="gallery-section">
+        <div class="container">
+            <h2>Onze Lekkernijen</h2>
+            <p>Een greep uit onze smakelijke selectie.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">[Afbeelding: Halve Kip]</div>
+                <div class="gallery-item">[Afbeelding: Drumsticks]</div>
+                <div class="gallery-item">[Afbeelding: Crispy Hotwings]</div>
+                <div class="gallery-item">[Afbeelding: Friet]</div>
             </div>
         </div>
     </section>
 
-    <section id="products" class="section-padding">
+    <section id="locatie" class="location-section">
         <div class="container">
-            <h2 data-key="productsTitle"></h2>
-            
-            <div class="product-showcase">
-                <div class="product-category">
-                    <div class="image-placeholder product-img"></div>
-                    <h3 data-key="productCat1Title"></h3>
-                    <p data-key="productCat1Desc"></p>
-                </div>
-
-                <div class="product-category">
-                    <div class="image-placeholder product-img"></div>
-                    <h3 data-key="productCat2Title"></h3>
-                    <p data-key="productCat2Desc"></p>
-                </div>
-
-                <div class="product-category">
-                    <div class="image-placeholder product-img">
-
-[Image of chicken parts]
-</div>
-                    <h3 data-key="productCat3Title"></h3>
-                    <p data-key="productCat3Desc"></p>
-                </div>
+            <h2>Volg De Foodtruck!</h2>
+            <p>We zijn mobiel! Volg ons op social media om te weten waar u ons vandaag kunt vinden. </p>
+            <div class="contact-info">
+                <p><strong>De warmste kip is onderweg naar u!</strong></p>
+                <a href="https://instagram.com/oranjekip" target="_blank" class="social-link">Volg ons op Instagram</a>
+                <p class="mt-20">Of scan de QR-code op onze foodtruck!</p>
             </div>
-            
-            <div class="text-center mt-40">
-                <a href="#" class="btn-secondary" data-key="viewAllProducts"></a>
+            <div class="foodtruck-visual">
+                [Afbeelding: Oranje Kip Foodtruck]
             </div>
         </div>
-    </section>
-
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <h2 data-key="aboutTitle"></h2>
-            <div class="content-split">
-                <div class="image-placeholder about-img"></div> 
-                <div>
-                    <p data-key="aboutParagraph1"></p>
-                    <p data-key="aboutParagraph2"></p>
-                    <a href="#contact" class="btn-primary" data-key="learnMoreButton"></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section-padding contact-section">
-        <div class="container">
-            <h2 data-key="contactTitle"></h2>
-            
-            <div class="contact-info-grid">
-                <div>
-                    <h3 data-key="contactAddressTitle"></h3>
-                    <p data-key="contactAddress"></p>
-                </div>
-                <div>
-                    <h3 data-key="contactPhoneTitle"></h3>
-                    <p data-key="contactPhone"></p>
-                </div>
-                <div>
-                    <h3 data-key="contactEmailTitle"></h3>
-                    <p data-key="contactEmail"></p>
-                </div>
-            </div>
-            
-            </div>
     </section>
 
     <footer>
         <div class="container">
-            <p data-key="footerText"></p>
-            <div class="social-links">[Social Media Icons]</div>
+            <p>&copy; 2025 Oranje Kip. De warmste kip van de stad. Alle rechten voorbehouden.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
