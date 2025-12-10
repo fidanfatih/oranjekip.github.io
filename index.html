@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="title"></title> 
+    
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <img src="assets/logo.png" alt="Oranje Kip Logo" class="logo-img"> 
+            
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="nl">NL</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home" data-key="navHome"></a></li>
+                    <li><a href="#products" data-key="navProducts"></a></li>
+                    <li><a href="#about" data-key="navAbout"></a></li>
+                    <li><a href="#contact" data-key="navContact"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 data-key="heroHeading"></h1>
+            <p data-key="heroSubheading"></p>
+            <a href="#products" class="btn-primary" data-key="heroButton"></a>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light quality-focus">
+        <div class="container text-center">
+            <h2 data-key="qualityTitle"></h2> 
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="image-placeholder icon-halal">[Halal Certification Icon]</div>
+                    <h3 data-key="featureHalalTitle"></h3>
+                    <p data-key="featureHalalDesc"></p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="image-placeholder icon-fresh">[Freshness Icon]</div>
+                    <h3 data-key="featureFreshTitle"></h3>
+                    <p data-key="featureFreshDesc"></p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="image-placeholder icon-dutch">[Dutch Flag Icon]</div>
+                    <h3 data-key="featureDutchTitle"></h3>
+                    <p data-key="featureDutchDesc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section-padding">
+        <div class="container">
+            <h2 data-key="productsTitle"></h2>
+            
+            <div class="product-showcase">
+                <div class="product-category">
+                    <div class="image-placeholder product-img"></div>
+                    <h3 data-key="productCat1Title"></h3>
+                    <p data-key="productCat1Desc"></p>
+                </div>
+
+                <div class="product-category">
+                    <div class="image-placeholder product-img"></div>
+                    <h3 data-key="productCat2Title"></h3>
+                    <p data-key="productCat2Desc"></p>
+                </div>
+
+                <div class="product-category">
+                    <div class="image-placeholder product-img">
+
+[Image of chicken parts]
+</div>
+                    <h3 data-key="productCat3Title"></h3>
+                    <p data-key="productCat3Desc"></p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-40">
+                <a href="#" class="btn-secondary" data-key="viewAllProducts"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 data-key="aboutTitle"></h2>
+            <div class="content-split">
+                <div class="image-placeholder about-img"></div> 
+                <div>
+                    <p data-key="aboutParagraph1"></p>
+                    <p data-key="aboutParagraph2"></p>
+                    <a href="#contact" class="btn-primary" data-key="learnMoreButton"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <h2 data-key="contactTitle"></h2>
+            
+            <div class="contact-info-grid">
+                <div>
+                    <h3 data-key="contactAddressTitle"></h3>
+                    <p data-key="contactAddress"></p>
+                </div>
+                <div>
+                    <h3 data-key="contactPhoneTitle"></h3>
+                    <p data-key="contactPhone"></p>
+                </div>
+                <div>
+                    <h3 data-key="contactEmailTitle"></h3>
+                    <p data-key="contactEmail"></p>
+                </div>
+            </div>
+            
+            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-key="footerText"></p>
+            <div class="social-links">[Social Media Icons]</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
