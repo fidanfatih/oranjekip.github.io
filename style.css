@@ -1,74 +1,68 @@
-/* ... (Mevcut Genel Stiller ve Navigasyon Stilleri) ... */
+/* ... (Mevcut Genel Stillerin Üst Kısmı) ... */
 
-/* Logo Stilleri */
+/* Header & Navigatie (BU BÖLÜMÜ GÜNCELLE!) */
+header {
+    background-color: var(--primary-color);
+    padding: 10px 0; /* Padding değerini küçülttük */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    /* Logoyu ve navigasyonu tek bir satırda tutmak için ayar */
+}
+
+/* LOGO STİLLERİ (BU BÖLÜMÜ GÜNCELLE!) */
 .logo-container {
-    height: 50px; /* Logo için sabit bir yükseklik belirleyin */
-    /* Logoyu sola hizalamak için: */
-    width: auto; 
+    /* Logonun maksimum yüksekliğini belirle (Örn: 50px) */
+    height: 60px; 
+    width: auto;
     margin: 0; 
     padding: 0;
 }
 
 .logo-container img {
-    height: 100%; /* Kapsayıcı yüksekliğini al */
+    /* Resmi kapsayıcının yüksekliğine sığdır */
+    height: 100%; 
     width: auto;
     display: block;
-}
-
-/* Hero Sectie (Foodtruck Görseli ve Slogan) */
-.hero {
-    /* Banner.jpg dosyasını arka plan olarak kullanın */
-    background: url('images/Banner.jpg') no-repeat center center/cover;
-    background-color: var(--secondary-color); /* Fallback */
-    color: white;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    /* ... (Diğer hero stilleri aynı kaldı) ... */
-}
-
-/* ... (Menü ve Diğer Bölüm Stilleri aynı kaldı) ... */
-
-/* Galeri Stilleri */
-.gallery-item {
-    padding: 0; /* İç dolguyu kaldır */
-    overflow: hidden; /* Taşmaları gizle */
-    /* Daha önce kullanılan arka plan rengini kaldırdık */
+    /* Logonun arka planını kaldır (PNG veya şeffaf bir resim kullanmıyorsanız) */
     background-color: transparent; 
-    font-style: normal;
-    color: var(--text-color);
-}
-
-.gallery-item img {
-    width: 100%; /* Resmi kutunun genişliğine yay */
-    height: 100%; /* Resmi kutunun yüksekliğine yay */
-    object-fit: cover; /* Resmi kutuyu dolduracak şekilde kırp (görüntü oranını korur) */
-    display: block;
-    border-radius: 6px;
-    transition: transform 0.3s;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05); /* Fare üzerine geldiğinde hafif büyütme efekti */
 }
 
 
-/* Food Truck Görseli Stilleri */
-.foodtruck-visual {
-    padding: 0;
-    border: none;
+/* Dil Seçeneği Stilleri (Konum ayarlaması gerekebilir) */
+.language-switcher {
+    position: static; /* Header içindeki akışa dahil et */
+    margin-left: 20px;
+    font-size: 0.9em;
+    font-family: var(--font-secondary);
+    font-weight: bold;
 }
 
-.foodtruck-visual img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 8px;
-    margin: 30px auto 0; /* Üstten boşluk ekle */
-    display: block;
-}
+/* ... (Diğer tüm CSS kodları aynı kalabilir) ... */
 
-/* ... (Footer ve Mobil Stilleri aynı kaldı) ... */
+
+/* Mobil için Media Query Güncellemesi (Gerekliyse) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Mobil görünümde logo yüksekliğini düşür */
+    .logo-container {
+        height: 45px; 
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        /* ... */
+    }
+}
