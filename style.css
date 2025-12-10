@@ -12,13 +12,19 @@
 *{box-sizing: border-box}
 html,body{height:100%}
 body{
-  margin:0;
+margin:0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color:var(--text);
-  background:var(--bg);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
+  color: var(--text);
+
+  /* Arka plan resmi */
+  background-image: url("images/background.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
 }
 
 .container{
@@ -187,4 +193,38 @@ body{
 .biblo {
     width: 130px;
     height: auto;
+}
+
+/* Banner + Halal yan yana */
+.banner-inline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.main-banner {
+  max-width: 650px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.halal-badge {
+  width: 140px;
+  height: auto;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .banner-inline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
